@@ -146,13 +146,13 @@ function errorHandling() {
 
         if (err.response.status === 404) {
           alert("Error: Page Not Found!");
-        } else if (err.request) {
+        }
+       } else if (err.request) {
           // Request was made but no response
           console.error(err.request);
         } else {
           console.error(err.message);
         }
-      }
     });
 }
 
@@ -197,7 +197,7 @@ const axiosInstance = axios.create({
     baseURL: 'http://jsonplaceholder.typicode.com'
 });
 
-axiosInstance.get('/comments').then(res => showOutput(res));
+// axiosInstance.get('/comments').then(res => showOutput(res));
 
 // Show output in browser
 function showOutput(res) {
